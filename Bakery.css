@@ -1,0 +1,519 @@
+ * {
+        padding: 0;
+        margin: 0;      
+}
+
+html {
+         height: 100vh;
+}
+
+ body {
+        font-family:'the light font', sans-serif;
+        font-size: 1em;
+
+        background: url('Photos/Bakery-Background.jpg');
+        background-size: cover;
+        background-attachment: fixed;    
+        background-position: center;
+        color: #fcd059;      
+        height: 80vh;
+        background-color: #202a45be;
+}
+
+ /* ---------------------------------- Navigation Bar ----------------------------- */
+ .navbar {
+        width: 12em;
+        height: 11em;
+        
+        background-color: #202a45b9;
+        border-right: solid 4px #fcd059;
+        position: fixed;
+        top: 0;
+        left: -15em;
+        display: flex;
+        flex-direction: column;
+      
+        border-radius: 0 20% 60% 0%;
+        transition: left 0.8s cubic-bezier(1,1,1,1);
+        padding-bottom: 230px;
+        z-index: 1000;
+}
+
+.logo-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 3.5em;
+        margin-bottom: 1em;
+        z-index: 1;
+}
+
+#Logo-img {
+        border-radius:50% ;
+        height: 10.8em;
+        border: solid 3px white;
+        
+}
+  
+.nav-list {
+        display: flex;
+        flex-direction: column;
+        padding: 5px; 
+        position: relative;
+         top: -2em;          
+}
+
+.nav-item {
+        list-style: none;     
+        text-align: left;
+        margin-top: 2em;
+        
+}
+  
+.nav-link {
+       text-decoration: none;
+       color: rgb(255, 255, 255);
+       letter-spacing: 5px;
+       text-transform: uppercase;
+       font-size: 1.2em;
+       font-weight: 300;
+       position: relative;      
+}
+   
+.nav-link::before,
+.nav-link::after {
+   
+        content: "";
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        background-color: #fcd059;
+        left: 0;
+        transform: scaleX(0);
+        transition: transform 0.7s;
+}
+   
+.nav-link::after {
+   
+        bottom: 0;
+        transform-origin: right;
+}
+   
+.nav-link::before {
+   
+        top: 0;
+        transform-origin: left;
+}
+   
+.nav-link:hover::before,
+.nav-link:hover::after {
+   
+        transform: scaleX(1); 
+}
+   
+/* ------------------------------------- Hamburger Menu ----------------------------- */
+        
+.hamburger-menu {
+       
+        width: 20px;
+        height: 20px; 
+        
+        position: fixed;
+        top: 0.3em;
+        left: 0.3em;
+        cursor: pointer ; 
+        
+        /*3 Line formation to Hamburger style*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; 
+
+        border-radius: 50%;
+        border: rgb(255, 255, 255) solid 2px;
+        background-color: black;
+        padding: 10px;  
+}
+      
+.line {
+     
+        width: 100%;
+        height: 4px;
+        
+        border-radius: 10px;
+        background-color: white;
+        transition: all 1s;
+}        
+   
+.change .line-1 {
+        
+        transform: rotateZ(-405deg) translate(-5px, 4px);
+}
+
+.change .line-2 {
+       
+        opacity: 0;
+}
+
+.change .line-3 {
+       
+        transform: rotateZ(405deg) translate(-5px, -4px);
+} 
+   
+.change {
+        
+        left: 0;
+}
+
+ /* ------------------------------------ Bakery Section ------------------------------ */
+ #bakery-section {
+         display: flex;
+         flex-direction: column;
+         margin: auto;
+         text-align: center;  
+         margin-top: 1em;
+         height: 28em;
+         width: 17em;
+         overflow:scroll;
+         overflow-x: hidden;
+         border-top: solid 5px #ffffff;
+         border-bottom: solid 5px #ffffff;    
+         border-bottom-left-radius: 10px;
+         border-bottom-right-radius: 10px;
+         border-radius: 50px;
+}
+
+.main-heading {
+         font-size: 1em;  
+         height: 3em;
+         width: 19em;
+         display: flex;
+         justify-content: center;
+         margin: auto;
+         margin-top: 4em;
+         color: #fcd059;
+      
+         border-top: solid 5px #fcd059;
+         border-bottom: solid 5px #fcd059;    
+         border-bottom-left-radius: 10px;
+         border-bottom-right-radius: 10px;
+         border-radius: 50px;
+         background-color: #202a458c;
+}
+
+.sub-heading {
+       
+        height: 6em;
+        width: 18em;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-top: 1em;
+        margin-bottom: 3em;
+        
+        color: #fcd059;
+        text-align: center;
+        
+        border-top: solid 5px #fcd059;
+        border-bottom: solid 5px #fcd059;    
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-radius: 50px;
+
+        background-color: #202a4560;
+  
+}
+
+.sub-heading h3{
+        font-size: 0.9em;   
+        width: 85%;
+}
+
+.main-heading h3,
+.sub-heading h3 {
+         margin: auto;
+}
+
+.images {
+        top: 0.5em;
+        position: relative;
+}
+
+.containers {
+         width: 16em;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;  
+         margin: auto;
+         margin-top: 1em;
+         margin-bottom: 1em ;
+         flex-direction: column;
+        
+         border-top: solid 5px #fcd059;
+         border-bottom: solid 5px #fcd059;    
+         border-bottom-left-radius: 10px;
+         border-bottom-right-radius: 10px;
+         border-radius: 50px;
+
+         background-color: #202a4560;
+}
+ /*------------------------------------ IMAGE BOX -----------------------------------*/
+.image-box {     
+         width: 100%;  
+}
+
+#bakery-section img {
+         margin: auto;
+         width: 195px;
+         height: 195px;
+         border-radius: 50%;    
+         box-shadow: 0px 0px 71px 1px rgb(255, 255, 255);
+         border: solid 5px rgb(255, 255, 255);
+}
+
+.heading-container {
+         display: flex;
+         height: 3em;
+         width: 12em;
+         position: relative;
+         top: 0.5em;
+       
+         margin: auto;
+         border-radius: 10px;
+         color: #fcd059;
+         border-top: solid 4px #fcd059;
+         border-bottom: solid 4px #fcd059;    
+         border-bottom-left-radius: 10px;
+         border-bottom-right-radius: 10px;
+         border-radius: 50px;
+         background-color: #202a45e3;            
+}
+
+.headings {
+         font-size: 1em;
+         display: flex;
+         margin: auto;
+         width: 90%;
+         justify-content: center;
+}
+
+p {
+         font-size: 1em;
+         margin: auto;
+         padding: 1em;
+         text-align: center;
+}
+
+ /*------------------------------------ Mobile Platform -----------------------------------*/
+         /* 400px */
+ @media all and (min-width : 28.1em) {
+
+body {
+        margin-top: 1em;
+}
+
+.main-heading {
+        width: 19em;
+        height: 4em;
+        left: 0;
+        right:0;
+        margin: auto;
+        font-size: 1em;
+        border-top: solid 3px;
+        border-bottom: solid 3px;
+}
+
+.sub-heading {
+        width: 27em;
+        height: 6em;
+}
+
+.sub-heading h3 {
+width: 90%;
+font-size: 1em;
+}
+
+#bakery-section {
+        width: 25em;
+        height: 31em;
+}
+
+.containers {
+         width: 20em;
+}
+
+.images {
+         position: relative;
+         top: 0.5em;
+}
+
+h1 {
+         font-size: 1.5em;
+}
+
+p{
+         font-size: 1.1em;
+         width: 85%;
+}}
+
+         /* 768px */
+ @media all and (min-width : 48em) {
+
+/*------------------------------------ Navigation Bar -----------------------------------------*/
+.logo-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 4em;
+        margin-bottom: 1em;
+}
+
+#Logo-img {   
+        height: 15.5em;
+        border-radius: 100%;   
+        z-index: 1;  
+}
+        
+.navbar {
+        width: 16.8em;
+        height: 12em;  
+        padding-bottom: 23em;
+        left: -18em;
+}
+
+.change {
+        left: 0;
+}
+
+.nav-link {
+        font-size: 1.5em; 
+}
+
+.nav-item {
+        margin-top: 3em;
+        display: flex;
+        width: fit-content;
+}
+
+/*------------------------------------ Hamburger Menu -----------------------------------------*/
+
+.hamburger-menu {
+   
+        width: 25px;
+        height: 25px;         
+}
+
+.change .line-1 {
+   
+        transform: rotate(-405deg) translate(-6px, 5px);
+}
+
+.change .line-2 {
+   
+        opacity: 0;
+}
+
+.change .line-3 {
+   
+        transform: rotateZ(405deg) translate(-6px, -6px);
+}  
+
+ body {
+         margin-top: 1;
+
+}
+
+ #bakery-section {
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         overflow:visible;
+         width: 100%;
+         height: 145em;
+         border: none;
+}
+
+.containers {
+         width: 21em; 
+         height: 24em;
+         margin-top: 3em;
+} 
+
+.images {
+         position: relative;
+       
+}
+
+h1 {
+         font-size: 1.3em;
+}
+
+.paragraphs {
+         font-size: 1.1em;   
+         width: 70%;        
+         margin: auto;             
+}
+
+.main-heading {
+        width: 23em;
+}
+
+.main-heading h3{
+         font-size: 1.4em;
+}
+
+.sub-heading {
+        width: 38em;
+}
+
+.sub-heading h3{
+         font-size: 1.2em;
+}}
+
+ /*------------------------------------- Desktop Platform ------------------------------------*/
+         /* 10px */
+ @media all and (min-width : 62.5em) {
+
+ #bakery-section {
+        height: 95em;
+}
+        
+.containers {
+         width: 19em; 
+         height: 26em;
+}}
+ 
+         /* 1215px */
+ @media all and (min-width : 75.9em) {
+
+#bakery-section {
+         width: 75em;
+}
+
+.paragraphs {
+        font-size: 1.2em;
+}}
+
+         /* 1900px */
+ @media all and (min-width : 118em) {
+ 
+/*----------------------------------------- Hamburger Menu -----------------------------------------*/
+ .hamburger-menu {                
+        top: 5px;
+        left: 5px;
+        width: 30px;
+        height: 30px;      
+}
+
+ .change .line-1 {
+         
+        transform: rotate(-405deg) translate(-8px, 7px);
+}
+  
+ .change .line-2 {
+         
+        opacity: 0;
+}
+  
+ .change .line-3 {
+         
+        transform: rotateZ(405deg) translate(-6px, -6px);
+}}
+

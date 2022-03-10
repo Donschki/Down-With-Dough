@@ -1,0 +1,487 @@
+ * {
+        padding: 0;
+        margin: 0;      
+}
+
+
+ body {
+         font-family:'the light font', sans-serif;
+         font-size: 1em;
+         background: url('Photos/Family.jpg');
+         background-size: cover;
+       
+         background-attachment: fixed;    
+         background-position: top;
+         color: #fcd059;   
+         background-color: #202a45be;
+}
+
+ /* --------------------------------------- Navigation ----------------------------------- */
+       
+ .navbar {
+         width: 12em;
+         height: 11em;
+         
+         background-color: #202a45b9;
+         border-right: solid 4px #fcd059;
+         position: fixed;
+         top: 0;
+         left: -15em;
+         display: flex;
+         flex-direction: column;
+       
+         border-radius: 0 20% 60% 0%;
+         transition: left 0.8s cubic-bezier(1,1,1,1);
+         padding-bottom: 230px;
+         z-index: 1000;
+}
+
+.logo-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 3.5em;
+        margin-bottom: 1em;
+        z-index: 1;
+}
+
+#Logo-img {
+        border-radius:50% ;
+        height: 10.8em;
+        border: solid 3px white;
+        
+}
+  
+.nav-list {
+         display: flex;
+         flex-direction: column;
+         padding: 5px;   
+         position: relative;
+         top: -2em;    
+}
+
+.nav-item {
+         list-style: none;     
+         text-align: left;
+         margin-top: 2em;       
+}
+   
+.nav-link {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        font-weight: 300;
+        position: relative;      
+}
+   
+.nav-link::before,
+.nav-link::after {
+   
+        content: "";
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        background-color: #fcd059;
+        left: 0;
+        transform: scaleX(0);
+        transition: transform 0.7s;
+}
+   
+.nav-link::after {
+   
+        bottom: 0;
+        transform-origin: right;
+}
+   
+.nav-link::before {
+   
+        top: 0;
+        transform-origin: left;
+}
+   
+.nav-link:hover::before,
+.nav-link:hover::after {
+   
+        transform: scaleX(1); 
+}
+   
+/* ------------------------------------- Hamburger Menu ----------------------------- */
+        
+.hamburger-menu {
+       
+        width: 20px;
+        height: 20px; 
+        
+        position: fixed;
+        top: 0.3em;
+        left: 0.3em;
+        cursor: pointer ; 
+        
+        /*3 Line formation to Hamburger style*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; 
+
+        border-radius: 50%;
+        border: rgb(255, 255, 255) solid 2px;
+        background-color: black;
+        padding: 10px;  
+}
+      
+.line {
+        width: 100%;
+        height: 4px; 
+        border-radius: 10px;
+        background-color: white;
+        transition: all 1s;
+}        
+   
+.change .line-1 {
+        
+        transform: rotateZ(-405deg) translate(-5px, 4px);
+}
+
+.change .line-2 {
+       
+        opacity: 0;
+}
+
+.change .line-3 {
+       
+        transform: rotateZ(405deg) translate(-5px, -4px);
+} 
+   
+.change {
+        
+        left: 0;
+}
+
+ /* ------------------------------------- SLOGAN ----------------------------- */
+.slogan-container {
+        position: absolute; 
+        top: 0.1em;
+        width: 100%;
+        height: 3.2em;
+        left: 0;
+        right: 0;
+        margin: auto;
+      
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-radius: 50px;
+        background-color: #202a4560;
+} 
+
+#slogan {
+        width: 70%;
+        font-size: 0.7em;
+   
+}
+
+                                 /* POPUP WINDOW FOR PHONE CONTAINER*/
+.modal {
+         display: none; /* Hidden by default */
+         position: fixed; /* Stay in place */
+         z-index: 1; /* Sit on top */
+         padding-top: 100px; /* Location of the box */
+         left: 0;
+         top: 0;
+         width: 100%; /* Full width */
+         height: 100%; /* Full height */
+         overflow: auto; /* Enable scroll if needed */
+         background-color: rgb(0,0,0); /* Fallback color */
+         background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+      
+                 /*------------------------------- Modal Content ---------------------*/
+.modal-content {
+         background-color: #202a45b9;
+         margin: auto;
+         width: 80%;
+         padding: 20px;
+         border: 1px solid #888;
+         position: relative;
+         top: 10em;
+         text-align: center;
+}
+    
+                 /* The Close Button */
+.close {
+         color: #aaaaaa;
+         position: absolute;
+         top: 0;
+         right: 0.2em;
+         font-size: 28px;
+         font-weight: bold;
+}
+      
+.close:hover,
+.close:focus {
+         color: #000;
+         text-decoration: none;
+         cursor: pointer;
+}
+
+.modal h1 {
+         font-size: 1.1em; 
+}
+
+                 /* --------------------------- Contact Info Footer ------------------- */
+ .contact-info-container {
+         background-color: #202a45b9;
+         color: #fcd059;
+         position: absolute;
+         
+         width: 19em;
+         height: 5.5em;
+         border-radius: 40px;
+         bottom: 1em;
+     
+         left: 0;
+         right: 0;
+         display: flex; 
+         margin: auto;   
+         justify-content: center;
+        
+         border-top-left-radius: 3rem ;
+         border-top-right-radius: 3rem ;
+         border-top: solid #fcd059 4px;
+         border-bottom: solid #fcd059 4px;
+}
+
+.contact-info-container img{
+         width: 30px;
+         height: 30px;     
+         margin: auto;
+}
+
+.contact-containers {
+         display: flex;  
+         height: 3em;
+         margin: auto;        
+}
+
+.contact-containers img {
+        background-color: white;
+        box-shadow: 0px 0px 8px 0.5px white;
+}
+
+.phone-container {
+         display: flex;
+}
+
+.phone-container img{
+         border-radius: 50%;
+         border: solid white 2px;
+         box-shadow: none;
+         box-shadow: 0px 0px 8px 0.5px white;
+}
+
+.contact-containers img {
+         border: solid 2px white;
+         width: 29px;  
+         height: 29px;
+         border-radius: 50%;
+}
+
+.headings {       
+         color: #ffffff;
+         font-size: 0.7em;
+         text-align: center;
+         margin: auto;   
+         position: relative;
+         width: 100%;   
+}
+
+.email-container:hover img,
+.facebook-container:hover img,
+.instagram-container:hover img,
+.phone-container:hover img {
+         transform:rotateZ(-360deg);
+         transition: 0.8s;
+         cursor: pointer;
+}
+
+ #copyright {
+         position: absolute;  
+         color: rgb(255, 255, 255); 
+         bottom: 0;
+         width: 100vw;
+         text-align: center;   
+         font-size: 0.5em;
+}
+ /*----------------------------------------- Mobile Platform -----------------------------------------*/
+         /* 500px */
+ @media all and (min-width : 31.25em) {
+
+.slogan-container {
+        font-size: 1.3em;
+        height: 2.4em;
+}
+
+#slogan {
+        width: 80%;
+}
+
+.contact-info-container {
+        width: 25em;
+        border-radius: 40px;
+        bottom: 1em;
+
+}}
+
+         /* 768px */
+ @media all and (min-width : 48em) {
+       
+ /* ------------------------------------- Contact Info Footer ----------------------------- */
+ #slogan {
+         width: 90%;
+         font-size: 0.78em;
+ }
+ 
+ .contact-info-container {
+        background-color: #202a45b9;
+        color: #fcd059;
+        position: fixed;      
+        width: 30em;
+}
+
+.contact-info-container img {
+        width: 2.2em;
+        height: 2.2em;     
+}
+
+.contact-containers {
+        width: 5em;
+        height: 3.5em;
+}
+
+.phone-container {
+        width: 8em;
+}
+
+.phone-container h1 {
+        height: 3.8em;
+        width: 8em;
+}
+
+.headings {       
+        color: #ffffff;
+        font-size: 0.8em;
+        text-align: center;
+        margin: auto;   
+        position: relative;
+        width: 100%;   
+}}
+
+         /* 900px */
+ @media all and (min-width : 56.25em) { 
+
+.slogan-container {
+        font-size: 1.5em;
+        height: 2.3em;
+        width: 100%;
+}
+
+#slogan {
+        width: 90%;
+}
+
+ .logo-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 4em;
+        margin-bottom: 1em;
+}
+
+ #Logo-img {   
+         height: 15.5em;
+         border-radius: 100%;   
+         z-index: 1;  
+}
+         
+.navbar {
+         width: 16.8em;
+         height: 12em;  
+         padding-bottom: 23em;
+         left: -18em;
+}
+
+ .change {
+         left: 0;
+}
+
+.nav-link {
+         font-size: 1.5em; 
+}
+
+.nav-item {
+         margin-top: 3em;
+         display: flex;
+         width: fit-content;
+}
+
+/*------------------------------------ Hamburger Menu -----------------------------------------*/
+ .hamburger-menu {  
+         width: 25px;
+         height: 25px;         
+}
+
+ .change .line-1 {
+    
+         transform: rotate(-405deg) translate(-6px, 5px);
+}
+
+ .change .line-2 {
+    
+         opacity: 0;
+}
+
+ .change .line-3 {
+    
+         transform: rotateZ(405deg) translate(-6px, -6px);
+}}
+
+ /*------------------------------------------ Desktop Platform ----------------------------------------*/  
+         /* 1050px */
+ @media all and (min-width : 65.625em) {
+.slogan-container{
+        font-size: 1.8em;
+        height: 1.9em;
+}}
+      
+         /* 1920px */
+ @media all and (min-width : 120em) {
+
+.slogan-container{
+        font-size: 1.8em;
+        height: 2.05em;
+}
+
+ .hamburger-menu {
+         width: 30px;
+         height: 30px; 
+}
+  
+ .change .line-1 {
+         
+         transform: rotate(-405deg) translate(-8px, 7px);
+}
+  
+ .change .line-2 {
+         
+         opacity: 0;
+}
+  
+ .change .line-3 {
+         
+         transform: rotateZ(405deg) translate(-6px, -6px);
+}        
+}
+
