@@ -1,0 +1,393 @@
+ * {
+       padding: 0;
+       margin: 0;    
+       
+}
+
+ body { 
+     font-family: 'the light font', sans-serif;
+     font-size: 1em;
+     background: url('Photos/Emma-Josh-Pouring.jpg') ;
+     
+     background-size: cover;
+     background-attachment: fixed;
+     background-position: center;  
+     color: white;
+     background-color: #202a45be;
+}
+
+
+/* ---------------------------------- Navigation Bar ----------------------------- */
+
+.navbar {
+    width: 12em;
+    height: 11em;
+    
+    background-color: #202a45b9;
+    border-right: solid 4px #fcd059;
+    position: fixed;
+    top: 0;
+    left: -15em;
+    display: flex;
+    flex-direction: column;
+  
+    border-radius: 0 20% 60% 0%;
+    transition: left 0.8s cubic-bezier(1,1,1,1);
+    padding-bottom: 230px;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5em;
+    margin-bottom: 1em;
+    z-index: 1;
+    
+}
+
+#Logo-img {
+    border-radius:50% ;
+    height: 10.8em;
+    border: solid 3px white;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;    
+    position: relative;
+         top: -2em;       
+}
+
+.nav-item {
+    list-style: none;     
+    text-align: left;
+    margin-top: 2em;
+    
+}
+
+.nav-link {
+   text-decoration: none;
+   color: rgb(255, 255, 255);
+   letter-spacing: 5px;
+   text-transform: uppercase;
+   font-size: 1.2em;
+   font-weight: 300;
+   position: relative;      
+}
+
+.nav-link::before,
+.nav-link::after {
+
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: #fcd059;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.7s;
+}
+
+.nav-link::after {
+
+    bottom: 0;
+    transform-origin: right;
+}
+
+.nav-link::before {
+
+    top: 0;
+    transform-origin: left;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+
+    transform: scaleX(1); 
+}
+
+/* ------------------------------------- Hamburger Menu ----------------------------- */
+    
+.hamburger-menu { 
+    width: 20px;
+    height: 20px; 
+    
+    position: fixed;
+    top: 0.3em;
+    left: 0.3em;
+    cursor: pointer ; 
+    
+    /*3 Line formation to Hamburger style*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+
+    border-radius: 50%;
+    border: rgb(255, 255, 255) solid 2px;
+    background-color: black;
+    padding: 10px; 
+}
+  
+.line {
+ 
+    width: 100%;
+    height: 4px;
+    
+    border-radius: 10px;
+    background-color: white;
+    transition: all 1s;
+}        
+
+.change .line-1 {
+    
+    transform: rotateZ(-405deg) translate(-5px, 4px);
+}
+
+.change .line-2 {
+   
+    opacity: 0;
+}
+
+.change .line-3 {
+   
+    transform: rotateZ(405deg) translate(-5px, -4px);
+} 
+
+.change {
+    
+    left: 0;
+}
+
+ #vision-section {
+     
+      margin: auto;
+      margin-top: 2em;
+ 
+      min-height: 100vh;
+      width: 90vw;
+      display: flex;
+      flex-direction: column;
+} 
+
+.heading-container { 
+     height: 2.5em;
+     display: flex;
+     
+     left: 0;
+     right: 0;
+     position: relative;
+     top: 1em;
+     
+     text-align: center;
+     width: 10em;
+     margin: auto;
+   
+     color: #fcd059;
+     border-top: solid 4px #fcd059;
+     border-bottom: solid 4px #fcd059;    
+     border-bottom-left-radius: 10px;
+     border-bottom-right-radius: 10px;
+     border-radius: 50px;
+     background-color: #202a45e3;
+}
+
+ .headings {
+     font-size: 1.2em;
+     position: relative;
+     margin: auto;
+}
+
+ .paragraphs {
+     margin: auto;
+     width: 85%;
+     text-align: justify ;
+     padding-top: 2em ;
+     padding-bottom: 1em;
+     
+     position: relative;
+     font-size: 1em;
+}
+    
+ .info-containers {
+
+     margin: auto;
+     width: 100%;
+     height: 100%;
+     text-align: center;
+     
+     height: fit-content;
+     margin-top: 2em;
+     border-top: solid 5px #fcd059;
+     border-bottom: solid 5px #fcd059;    
+     backdrop-filter: 0px 20px #ffffff;
+     border-bottom-left-radius: 10px;
+     border-bottom-right-radius: 10px;
+     border-radius: 50px;
+
+     background-color: #202a4560;
+}
+
+ /*------------------------------------ Phone & Tablet -----------------------------------*/
+
+         /* 530px */
+ @media all and (min-width : 33.125em) {
+
+.info-containers {
+     width: 30em;
+}
+
+.heading-container {
+     width: 11em;
+}
+
+ .headings {
+     font-size: 1.3em;
+    
+}
+
+ .paragraphs {
+     width: 85%;
+}} 
+
+         /* 800px */
+ @media all and (min-width : 50.6em) {
+
+ /*------------------------------------ Navigation Bar -----------------------------------------*/
+ 
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+    margin-bottom: 1em;
+}
+
+#Logo-img {   
+    height: 15.5em;
+    border-radius: 100%;   
+    z-index: 1;  
+}
+    
+.navbar {
+    width: 16.8em;
+    height: 12em;  
+    padding-bottom: 23em;
+    left: -18em;
+}
+
+.change {
+    left: 0;
+}
+
+.nav-list {
+         position: relative;
+         top: -2em;
+}
+
+.nav-link {
+         font-size: 1.5em; 
+}
+
+.nav-item {
+         margin-top: 3em;
+         display: flex;
+         width: fit-content;
+}
+
+/*------------------------------------ Hamburger Menu -----------------------------------------*/
+
+.hamburger-menu {
+
+    width: 25px;
+    height: 25px;         
+}
+
+.change .line-1 {
+
+    transform: rotate(-405deg) translate(-6px, 5px);
+}
+
+.change .line-2 {
+
+    opacity: 0;
+}
+
+.change .line-3 {
+
+    transform: rotateZ(405deg) translate(-6px, -6px);
+}
+
+/*------------------------------------ Vision Container -----------------------------------------*/
+body {
+    margin-top: -2em;
+}
+
+.info-containers {
+    width: 35em;
+}
+
+.heading-container {
+    width: 13em;
+}
+
+.headings {
+    font-size: 1.5em;
+}
+
+.paragraphs {
+    width: 28em;
+    font-size: 1.1em;
+}} 
+      
+         /* 1024px */
+ @media all and (min-width : 64em) { 
+
+/*------------------------------------ Vision Section -----------------------------------------*/
+
+.info-containers {
+    width: 40em;
+}
+
+.paragraphs {
+    width: 33em;
+}} 
+
+ /*------------------------------------ Desktop & Laptop -----------------------------------*/
+         /* 1920px */
+ @media all and (min-width : 120em) {
+
+ .hamburger-menu {
+     top: 5px;
+     left: 5px;
+     
+     width: 30px;
+     height: 30px;           
+}
+  
+ .change .line-1 {
+         
+        transform: rotate(-405deg) translate(-8px, 7px);
+}
+  
+ .change .line-2 {
+         
+        opacity: 0;
+}
+  
+ .change .line-3 {
+         
+        transform: rotateZ(405deg) translate(-6px, -6px);
+}
+
+/*------------------------------------ Vision Container -----------------------------------------*/
+.info-containers {
+    width: 52em;
+}
+
+.paragraphs {
+    width: 40em;
+    font-size: 1.2em;
+
+}}
+
